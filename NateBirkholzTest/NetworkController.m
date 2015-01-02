@@ -17,7 +17,6 @@
 // ------------------------
 
 // Boilerplate standardized Singleton pattern as recommended by Apple
-// I try t make network calls on a Singlton in general
 
 @synthesize someProperty;
 
