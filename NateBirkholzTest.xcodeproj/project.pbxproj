@@ -13,7 +13,6 @@
 		436AD5551A55B83B009AC991 /* CellLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 436AD5541A55B83B009AC991 /* CellLabel.m */; };
 		43B045231A49D98000837FAE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 43B045221A49D98000837FAE /* main.m */; };
 		43B045261A49D98000837FAE /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 43B045251A49D98000837FAE /* AppDelegate.m */; };
-		43B045291A49D98000837FAE /* NateBirkholzTest.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 43B045271A49D98000837FAE /* NateBirkholzTest.xcdatamodeld */; };
 		43B0452C1A49D98000837FAE /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 43B0452B1A49D98000837FAE /* ViewController.m */; };
 		43B0452F1A49D98000837FAE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 43B0452D1A49D98000837FAE /* Main.storyboard */; };
 		43B045311A49D98000837FAE /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 43B045301A49D98000837FAE /* Images.xcassets */; };
@@ -47,7 +46,6 @@
 		43B045221A49D98000837FAE /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		43B045241A49D98000837FAE /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		43B045251A49D98000837FAE /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		43B045281A49D98000837FAE /* NateBirkholzTest.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = NateBirkholzTest.xcdatamodel; sourceTree = "<group>"; };
 		43B0452A1A49D98000837FAE /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		43B0452B1A49D98000837FAE /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		43B0452E1A49D98000837FAE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -152,7 +150,6 @@
 		43B0454A1A4A380C00837FAE /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				43B045271A49D98000837FAE /* NateBirkholzTest.xcdatamodeld */,
 				436AD5471A55078C009AC991 /* ImageObject.h */,
 				436AD5481A55078C009AC991 /* ImageObject.m */,
 			);
@@ -278,7 +275,6 @@
 				436AD54C1A5507A6009AC991 /* JSONParser.m in Sources */,
 				436AD5491A55078C009AC991 /* ImageObject.m in Sources */,
 				436AD5551A55B83B009AC991 /* CellLabel.m in Sources */,
-				43B045291A49D98000837FAE /* NateBirkholzTest.xcdatamodeld in Sources */,
 				43B045261A49D98000837FAE /* AppDelegate.m in Sources */,
 				43B0454F1A4A387100837FAE /* ViewCell.m in Sources */,
 				43B0452C1A49D98000837FAE /* ViewController.m in Sources */,
@@ -488,19 +484,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCVersionGroup section */
-		43B045271A49D98000837FAE /* NateBirkholzTest.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				43B045281A49D98000837FAE /* NateBirkholzTest.xcdatamodel */,
-			);
-			currentVersion = 43B045281A49D98000837FAE /* NateBirkholzTest.xcdatamodel */;
-			path = NateBirkholzTest.xcdatamodeld;
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
-		};
-/* End XCVersionGroup section */
 	};
 	rootObject = 43B045151A49D98000837FAE /* Project object */;
 }

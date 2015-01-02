@@ -55,11 +55,11 @@
 #pragma mark UITableView
 // ------------------------
 
--(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
   return self.imageObjects.count;
 }
 
--(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
   ImageObject *imageObjectForRow = self.imageObjects[indexPath.row];
   ViewCell *cell = [[self tableView] dequeueReusableCellWithIdentifier:@"VIEW_CELL" forIndexPath:indexPath];
   NSString *imageObjectIDString = [NSString stringWithFormat:@"%@", imageObjectForRow.imageObjectID];

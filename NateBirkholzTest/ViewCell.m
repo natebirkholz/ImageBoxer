@@ -10,6 +10,7 @@
 
 @implementation ViewCell
 
+// Add borders as in example
 - (void)awakeFromNib {
   [[[self contentView] layer] setBorderColor:[UIColor blackColor].CGColor];
   [[[self cellImageView] layer] setBorderColor:[UIColor blackColor].CGColor];
