@@ -11,7 +11,14 @@
 @implementation ViewCell
 
 - (void)awakeFromNib {
-
+  [[[self contentView] layer] setBorderColor:[UIColor blackColor].CGColor];
+  [[[self cellImageView] layer] setBorderColor:[UIColor blackColor].CGColor];
+  [[[self cellIDLabel] layer] setBorderColor:[UIColor blackColor].CGColor];
+  [[[self cellTitleLabel] layer] setBorderColor:[UIColor blackColor].CGColor];
+  [[[self contentView] layer] setBorderWidth:1.0];
+  [[[self cellImageView] layer] setBorderWidth:2.0];
+  [[[self cellIDLabel] layer] setBorderWidth:2.0];
+  [[[self cellTitleLabel] layer] setBorderWidth:2.0];
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {

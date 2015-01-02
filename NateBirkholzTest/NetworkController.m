@@ -12,6 +12,13 @@
 
 @implementation NetworkController
 
+// ------------------------
+#pragma mark Singleton
+// ------------------------
+
+// Boilerplate standardized Singleton pattern as recommended by Apple
+// I try t make network calls on a Singlton in general
+
 @synthesize someProperty;
 
 + (id)sharedNetworkController {
@@ -27,6 +34,10 @@
   // Recommended by Singleton pattern
 }
 
+// ------------------------
+#pragma mark Init
+// ------------------------
+
 - (instancetype)init {
   if ((self = [super init])) {
     self.apiURL = @"http://jsonplaceholder.typicode.com/photos/";
@@ -35,20 +46,14 @@
   return self;
 }
 
+// ------------------------
+#pragma mark JSON Fetch
+// ------------------------
 
-- (void)fetchImageDataFromURL:(NSURL *)fetchURL withCompletionHandler:(void (^)(NSData *imageData))completionHandler {
-  [[self networkQueue] addOperationWithBlock:^{
-    NSData *imageData = [NSData dataWithContentsOfURL: fetchURL];
-    [[NSOperationQueue mainQueue] addOperationWithBlock:^{
-      completionHandler(imageData);
-    }];
-  }];
-}
-
+// Fetch the JSON and return an array of ImageOjects
 - (void)getArrayOfImageObjectsWithCompletionHandler:(void (^)(NSArray *imageObjects))completionHandler {
   NSURL *fetchURL = [[NSURL alloc] initWithString:[self apiURL]];
   [self fetchJSONDataFromURL:fetchURL withCompletionHandler:^(NSData *dataFromURL) {
-    NSLog(@"Fetching");
     JSONParser *parser = [[JSONParser alloc] init];
     NSArray *imageObjects = [parser parseJSONIntoImageObjectsFromData:dataFromURL];
     [[NSOperationQueue mainQueue] addOperationWithBlock:^{
@@ -57,6 +62,7 @@
   }];
 }
 
+// Abstracted JSON fetch in case of future expansion and to make function more readable
 - (void)fetchJSONDataFromURL:(NSURL *)fetchURL withCompletionHandler:(void (^)(NSData *dataFromURL))completionHandler {
   NSURLSession *fetchSession = [NSURLSession sharedSession];
   NSMutableURLRequest *request = [[NSMutableURLRequest alloc] initWithURL:fetchURL];
@@ -69,7 +75,6 @@
       NSInteger statusCode = [httpResponse statusCode];
       switch (statusCode) {
         case 200: {
-          NSLog(@"Success");
           completionHandler(data);
           break;
         }
@@ -82,6 +87,20 @@
     }
   }];
   [dataTask resume];
+}
+
+// ------------------------
+#pragma mark Image Fetch
+// ------------------------
+
+// Asynchronously fetch image data
+- (void)fetchImageDataFromURL:(NSURL *)fetchURL withCompletionHandler:(void (^)(NSData *imageData))completionHandler {
+  [[self networkQueue] addOperationWithBlock:^{
+    NSData *imageData = [NSData dataWithContentsOfURL: fetchURL];
+    [[NSOperationQueue mainQueue] addOperationWithBlock:^{
+      completionHandler(imageData);
+    }];
+  }];
 }
 
 

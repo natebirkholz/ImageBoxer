@@ -18,7 +18,9 @@
 @property (nonatomic, retain) NSString *someProperty;
 
 + (id)sharedNetworkController;
+- (instancetype)init;
 - (void)getArrayOfImageObjectsWithCompletionHandler:(void (^)(NSArray *imageObjects))completionHandler;
+- (void)fetchJSONDataFromURL:(NSURL *)fetchURL withCompletionHandler:(void (^)(NSData *dataFromURL))completionHandler;
 - (void)fetchImageDataFromURL:(NSURL *)fetchURL withCompletionHandler:(void (^)(NSData *imageData))completionHandler;
 
 @end

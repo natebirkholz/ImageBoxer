@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		436AD5491A55078C009AC991 /* ImageObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 436AD5481A55078C009AC991 /* ImageObject.m */; };
 		436AD54C1A5507A6009AC991 /* JSONParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 436AD54B1A5507A6009AC991 /* JSONParser.m */; };
-		436AD54F1A5507B6009AC991 /* Constants.m in Sources */ = {isa = PBXBuildFile; fileRef = 436AD54E1A5507B6009AC991 /* Constants.m */; };
 		436AD5521A550EBB009AC991 /* NetworkController.m in Sources */ = {isa = PBXBuildFile; fileRef = 436AD5511A550EBB009AC991 /* NetworkController.m */; };
 		436AD5551A55B83B009AC991 /* CellLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 436AD5541A55B83B009AC991 /* CellLabel.m */; };
 		43B045231A49D98000837FAE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 43B045221A49D98000837FAE /* main.m */; };
@@ -39,8 +38,6 @@
 		436AD5481A55078C009AC991 /* ImageObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageObject.m; sourceTree = "<group>"; };
 		436AD54A1A5507A6009AC991 /* JSONParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONParser.h; sourceTree = "<group>"; };
 		436AD54B1A5507A6009AC991 /* JSONParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSONParser.m; sourceTree = "<group>"; };
-		436AD54D1A5507B6009AC991 /* Constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
-		436AD54E1A5507B6009AC991 /* Constants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Constants.m; sourceTree = "<group>"; };
 		436AD5501A550EBB009AC991 /* NetworkController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetworkController.h; sourceTree = "<group>"; };
 		436AD5511A550EBB009AC991 /* NetworkController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetworkController.m; sourceTree = "<group>"; };
 		436AD5531A55B83B009AC991 /* CellLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CellLabel.h; sourceTree = "<group>"; };
@@ -146,8 +143,6 @@
 				43B045251A49D98000837FAE /* AppDelegate.m */,
 				436AD54A1A5507A6009AC991 /* JSONParser.h */,
 				436AD54B1A5507A6009AC991 /* JSONParser.m */,
-				436AD54D1A5507B6009AC991 /* Constants.h */,
-				436AD54E1A5507B6009AC991 /* Constants.m */,
 				436AD5501A550EBB009AC991 /* NetworkController.h */,
 				436AD5511A550EBB009AC991 /* NetworkController.m */,
 			);
@@ -284,7 +279,6 @@
 				436AD5491A55078C009AC991 /* ImageObject.m in Sources */,
 				436AD5551A55B83B009AC991 /* CellLabel.m in Sources */,
 				43B045291A49D98000837FAE /* NateBirkholzTest.xcdatamodeld in Sources */,
-				436AD54F1A5507B6009AC991 /* Constants.m in Sources */,
 				43B045261A49D98000837FAE /* AppDelegate.m in Sources */,
 				43B0454F1A4A387100837FAE /* ViewCell.m in Sources */,
 				43B0452C1A49D98000837FAE /* ViewController.m in Sources */,

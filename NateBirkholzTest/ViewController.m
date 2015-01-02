@@ -12,11 +12,15 @@
 @interface ViewController ()
 
   @property NSArray *imageObjects;
-@property NSMutableDictionary *imageCache;
+  @property NSMutableDictionary *imageCache;
 
 @end
 
 @implementation ViewController
+
+// ------------------------
+#pragma mark Lifecycle
+// ------------------------
 
 - (void)viewDidLoad {
   [super viewDidLoad];
@@ -25,7 +29,6 @@
   [[self tableView] registerNib:[UINib nibWithNibName:@"ViewCell" bundle:[NSBundle mainBundle]] forCellReuseIdentifier:@"VIEW_CELL"];
   self.networkController = [NetworkController sharedNetworkController];
   self.imageCache = [NSMutableDictionary dictionary];
-
 }
 
 - (void)didReceiveMemoryWarning {
@@ -37,19 +40,20 @@
   [[self activityIndicator] startAnimating];
   [[self loadingLabel] setHidden:NO];
   [[self networkController] getArrayOfImageObjectsWithCompletionHandler:^(NSArray *imageObjects) {
-
     self.imageObjects = imageObjects;
     [UIView transitionWithView:self.tableView duration:0.2 options:UIViewAnimationOptionTransitionCrossDissolve animations:^{
       [[self tableView] reloadData];
     } completion:nil];
-
-
     [UIView transitionWithView:[self view] duration:0.5 options:UIViewAnimationOptionTransitionCrossDissolve animations:^{
       [[self loadingLabel] setHidden:YES];
       [[self activityIndicator] stopAnimating];
     } completion:nil];
   }];
 }
+
+// ------------------------
+#pragma mark UITableView
+// ------------------------
 
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
   return self.imageObjects.count;
@@ -69,6 +73,10 @@
 
   return cell;
 }
+
+// ---------------------------------------
+#pragma mark Image caching and fetching
+// ---------------------------------------
 
 - (void)getImageForCell:(ViewCell *)cell fromURLString:(NSString *)URLString {
   if (self.imageCache[URLString] != nil) {
