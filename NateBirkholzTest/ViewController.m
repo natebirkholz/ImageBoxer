@@ -8,8 +8,10 @@
 
 #import "ViewController.h"
 #import "ViewCell.h"
+#import "DetailViewController.h"
+#import "TransitionToDetailController.h"
 
-@interface ViewController ()
+@interface ViewController ()<UINavigationControllerDelegate>
 
   @property NSArray *imageObjects;
   @property NSMutableDictionary *imageCache;
@@ -29,6 +31,7 @@
   [[self tableView] registerNib:[UINib nibWithNibName:@"ViewCell" bundle:[NSBundle mainBundle]] forCellReuseIdentifier:@"VIEW_CELL"];
   self.networkController = [NetworkController sharedNetworkController];
   self.imageCache = [NSMutableDictionary dictionary];
+
 }
 
 - (void)didReceiveMemoryWarning {
@@ -37,8 +40,13 @@
 
 - (void)viewWillAppear:(BOOL)animated {
   [super viewWillAppear:animated];
+  [[self navigationController] setDelegate:self];
   [[self activityIndicator] startAnimating];
   [[self loadingLabel] setHidden:NO];
+  if (self.imageObjects) {
+    [[self activityIndicator] stopAnimating];
+    [[self loadingLabel] setHidden:YES];
+  } else {
   [[self networkController] getArrayOfImageObjectsWithCompletionHandler:^(NSArray *imageObjects) {
     self.imageObjects = imageObjects;
     [UIView transitionWithView:self.tableView duration:0.2 options:UIViewAnimationOptionTransitionCrossDissolve animations:^{
@@ -49,6 +57,15 @@
       [[self activityIndicator] stopAnimating];
     } completion:nil];
   }];
+  }
+}
+
+- (void)viewWillDisappear:(BOOL)animated {
+  [super viewWillDisappear:animated];
+
+  if (self.navigationController.delegate == self) {
+    self.navigationController.delegate = nil;
+  }
 }
 
 // ------------------------
@@ -68,30 +85,76 @@
 
   cell.cellIDLabel.text = imageObjectIDString;
   cell.cellTitleLabel.text = imageObjectForRow.imageObjectTitle;
+  cell.cellImageView.image = nil;
 
-  [self getImageForCell:cell fromURLString:imageObjectForRow.imageObjectThumbnailURL];
+  [[cell imgActivityIndicator] startAnimating];
+
+  [self getImageForCell:cell atIndexPath:indexPath fromURLString:imageObjectForRow.imageObjectThumbnailURL];
 
   return cell;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+  ImageObject *selectedObject = self.imageObjects[indexPath.row];
+  [self performSegueWithIdentifier:@"TO_DETAIL_VC" sender:selectedObject];
+}
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+  if ([segue.destinationViewController isKindOfClass:[DetailViewController class]]) {
+    NSIndexPath *selectedIndexPath = [self.tableView indexPathForSelectedRow];
+    if (selectedIndexPath) {
+      DetailViewController *detailViewController = segue.destinationViewController;
+      ImageObject *selectedObject = self.imageObjects[selectedIndexPath.row];
+      detailViewController.detailObject = selectedObject;
+      detailViewController.imageThumb = self.imageCache[selectedObject.imageObjectThumbnailURL];
+    }
+  }
 }
 
 // ---------------------------------------
 #pragma mark Image caching and fetching
 // ---------------------------------------
 
-- (void)getImageForCell:(ViewCell *)cell fromURLString:(NSString *)URLString {
+- (void)getImageForCell:(ViewCell *)cell atIndexPath:(NSIndexPath *)indexPath fromURLString:(NSString *)URLString {
   if (self.imageCache[URLString] != nil) {
     [UIView transitionWithView:cell.cellImageView duration:0.2 options:UIViewAnimationOptionTransitionCrossDissolve animations:^{
       cell.cellImageView.image = self.imageCache[URLString];
+      [[cell imgActivityIndicator] stopAnimating];
     } completion:nil];
   } else {
     NSURL *fetchURL = [[NSURL alloc] initWithString: URLString];
+
     [self.networkController fetchImageDataFromURL:fetchURL withCompletionHandler:^(NSData *imageData) {
       UIImage *imageForCell = [[UIImage alloc] initWithData: imageData];
       [self.imageCache setObject:imageForCell forKey:URLString];
+
+      // Only update cells on screen
+      ViewCell *updateCell = (ViewCell *)[[self tableView] cellForRowAtIndexPath:indexPath];
+
       [UIView transitionWithView:cell.cellImageView duration:0.2 options:UIViewAnimationOptionTransitionCrossDissolve animations:^{
-        cell.cellImageView.image = imageForCell;
-      } completion:nil];
+        [[updateCell imgActivityIndicator] startAnimating];
+        updateCell.cellImageView.image = imageForCell;
+      } completion:^(BOOL finished) {
+        [[updateCell imgActivityIndicator] stopAnimating];
+      }];
     }];
+  }
+}
+
+- (void)navigationController:(UINavigationController *)navigationController willShowViewController:(UIViewController *)viewController animated:(BOOL)animated {
+  NSLog(@"WILL SHOW");
+}
+
+- (id<UIViewControllerAnimatedTransitioning>)navigationController:(UINavigationController *)navigationController
+                                  animationControllerForOperation:(UINavigationControllerOperation)operation
+                                               fromViewController:(UIViewController *)fromVC
+                                                 toViewController:(UIViewController *)toVC {
+
+  if (fromVC == self && [toVC isKindOfClass:[DetailViewController class]]) {
+    NSLog(@"TRANSITIONING");
+    return  [[TransitionToDetailController alloc] init];
+  } else {
+    return nil;
   }
 }
 

@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		434685EF1A5A42BC00315501 /* TransitionToDetailController.m in Sources */ = {isa = PBXBuildFile; fileRef = 434685EE1A5A42BC00315501 /* TransitionToDetailController.m */; };
+		434685F21A5A434800315501 /* Constants.m in Sources */ = {isa = PBXBuildFile; fileRef = 434685F11A5A434800315501 /* Constants.m */; };
+		434685F51A5A45DC00315501 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 434685F41A5A45DC00315501 /* DetailViewController.m */; };
+		434685F81A5A89B900315501 /* TransitionFromDetailController.m in Sources */ = {isa = PBXBuildFile; fileRef = 434685F71A5A89B900315501 /* TransitionFromDetailController.m */; };
 		436AD5491A55078C009AC991 /* ImageObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 436AD5481A55078C009AC991 /* ImageObject.m */; };
 		436AD54C1A5507A6009AC991 /* JSONParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 436AD54B1A5507A6009AC991 /* JSONParser.m */; };
 		436AD5521A550EBB009AC991 /* NetworkController.m in Sources */ = {isa = PBXBuildFile; fileRef = 436AD5511A550EBB009AC991 /* NetworkController.m */; };
@@ -33,6 +37,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		434685ED1A5A42BC00315501 /* TransitionToDetailController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TransitionToDetailController.h; sourceTree = "<group>"; };
+		434685EE1A5A42BC00315501 /* TransitionToDetailController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TransitionToDetailController.m; sourceTree = "<group>"; };
+		434685F01A5A434800315501 /* Constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
+		434685F11A5A434800315501 /* Constants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Constants.m; sourceTree = "<group>"; };
+		434685F31A5A45DC00315501 /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
+		434685F41A5A45DC00315501 /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
+		434685F61A5A89B900315501 /* TransitionFromDetailController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TransitionFromDetailController.h; sourceTree = "<group>"; };
+		434685F71A5A89B900315501 /* TransitionFromDetailController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TransitionFromDetailController.m; sourceTree = "<group>"; };
 		436AD5471A55078C009AC991 /* ImageObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageObject.h; sourceTree = "<group>"; };
 		436AD5481A55078C009AC991 /* ImageObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageObject.m; sourceTree = "<group>"; };
 		436AD54A1A5507A6009AC991 /* JSONParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONParser.h; sourceTree = "<group>"; };
@@ -41,7 +53,7 @@
 		436AD5511A550EBB009AC991 /* NetworkController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetworkController.m; sourceTree = "<group>"; };
 		436AD5531A55B83B009AC991 /* CellLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CellLabel.h; sourceTree = "<group>"; };
 		436AD5541A55B83B009AC991 /* CellLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CellLabel.m; sourceTree = "<group>"; };
-		43B0451D1A49D98000837FAE /* NateBirkholzTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NateBirkholzTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		43B0451D1A49D98000837FAE /* ImageFiler.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ImageFiler.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		43B045211A49D98000837FAE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		43B045221A49D98000837FAE /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		43B045241A49D98000837FAE /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -51,7 +63,7 @@
 		43B0452E1A49D98000837FAE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		43B045301A49D98000837FAE /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		43B045331A49D98000837FAE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
-		43B045391A49D98000837FAE /* NateBirkholzTestTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NateBirkholzTestTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		43B045391A49D98000837FAE /* ImageFilerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ImageFilerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		43B0453E1A49D98000837FAE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		43B0453F1A49D98000837FAE /* NateBirkholzTestTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NateBirkholzTestTests.m; sourceTree = "<group>"; };
 		43B0454C1A4A387100837FAE /* ViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewCell.h; sourceTree = "<group>"; };
@@ -89,8 +101,8 @@
 		43B0451E1A49D98000837FAE /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				43B0451D1A49D98000837FAE /* NateBirkholzTest.app */,
-				43B045391A49D98000837FAE /* NateBirkholzTestTests.xctest */,
+				43B0451D1A49D98000837FAE /* ImageFiler.app */,
+				43B045391A49D98000837FAE /* ImageFilerTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -135,14 +147,20 @@
 		43B045491A4A359D00837FAE /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				43B0452A1A49D98000837FAE /* ViewController.h */,
-				43B0452B1A49D98000837FAE /* ViewController.m */,
 				43B045241A49D98000837FAE /* AppDelegate.h */,
 				43B045251A49D98000837FAE /* AppDelegate.m */,
+				43B0452A1A49D98000837FAE /* ViewController.h */,
+				43B0452B1A49D98000837FAE /* ViewController.m */,
+				434685F31A5A45DC00315501 /* DetailViewController.h */,
+				434685F41A5A45DC00315501 /* DetailViewController.m */,
 				436AD54A1A5507A6009AC991 /* JSONParser.h */,
 				436AD54B1A5507A6009AC991 /* JSONParser.m */,
 				436AD5501A550EBB009AC991 /* NetworkController.h */,
 				436AD5511A550EBB009AC991 /* NetworkController.m */,
+				434685ED1A5A42BC00315501 /* TransitionToDetailController.h */,
+				434685EE1A5A42BC00315501 /* TransitionToDetailController.m */,
+				434685F61A5A89B900315501 /* TransitionFromDetailController.h */,
+				434685F71A5A89B900315501 /* TransitionFromDetailController.m */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -152,6 +170,8 @@
 			children = (
 				436AD5471A55078C009AC991 /* ImageObject.h */,
 				436AD5481A55078C009AC991 /* ImageObject.m */,
+				434685F01A5A434800315501 /* Constants.h */,
+				434685F11A5A434800315501 /* Constants.m */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -174,9 +194,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		43B0451C1A49D98000837FAE /* NateBirkholzTest */ = {
+		43B0451C1A49D98000837FAE /* ImageFiler */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 43B045431A49D98000837FAE /* Build configuration list for PBXNativeTarget "NateBirkholzTest" */;
+			buildConfigurationList = 43B045431A49D98000837FAE /* Build configuration list for PBXNativeTarget "ImageFiler" */;
 			buildPhases = (
 				43B045191A49D98000837FAE /* Sources */,
 				43B0451A1A49D98000837FAE /* Frameworks */,
@@ -186,14 +206,14 @@
 			);
 			dependencies = (
 			);
-			name = NateBirkholzTest;
+			name = ImageFiler;
 			productName = NateBirkholzTest;
-			productReference = 43B0451D1A49D98000837FAE /* NateBirkholzTest.app */;
+			productReference = 43B0451D1A49D98000837FAE /* ImageFiler.app */;
 			productType = "com.apple.product-type.application";
 		};
-		43B045381A49D98000837FAE /* NateBirkholzTestTests */ = {
+		43B045381A49D98000837FAE /* ImageFilerTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 43B045461A49D98000837FAE /* Build configuration list for PBXNativeTarget "NateBirkholzTestTests" */;
+			buildConfigurationList = 43B045461A49D98000837FAE /* Build configuration list for PBXNativeTarget "ImageFilerTests" */;
 			buildPhases = (
 				43B045351A49D98000837FAE /* Sources */,
 				43B045361A49D98000837FAE /* Frameworks */,
@@ -204,9 +224,9 @@
 			dependencies = (
 				43B0453B1A49D98000837FAE /* PBXTargetDependency */,
 			);
-			name = NateBirkholzTestTests;
+			name = ImageFilerTests;
 			productName = NateBirkholzTestTests;
-			productReference = 43B045391A49D98000837FAE /* NateBirkholzTestTests.xctest */;
+			productReference = 43B045391A49D98000837FAE /* ImageFilerTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -227,7 +247,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 43B045181A49D98000837FAE /* Build configuration list for PBXProject "NateBirkholzTest" */;
+			buildConfigurationList = 43B045181A49D98000837FAE /* Build configuration list for PBXProject "ImageFiler" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -240,8 +260,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				43B0451C1A49D98000837FAE /* NateBirkholzTest */,
-				43B045381A49D98000837FAE /* NateBirkholzTestTests */,
+				43B0451C1A49D98000837FAE /* ImageFiler */,
+				43B045381A49D98000837FAE /* ImageFilerTests */,
 			);
 		};
 /* End PBXProject section */
@@ -272,11 +292,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				434685EF1A5A42BC00315501 /* TransitionToDetailController.m in Sources */,
 				436AD54C1A5507A6009AC991 /* JSONParser.m in Sources */,
 				436AD5491A55078C009AC991 /* ImageObject.m in Sources */,
 				436AD5551A55B83B009AC991 /* CellLabel.m in Sources */,
 				43B045261A49D98000837FAE /* AppDelegate.m in Sources */,
+				434685F21A5A434800315501 /* Constants.m in Sources */,
+				434685F81A5A89B900315501 /* TransitionFromDetailController.m in Sources */,
 				43B0454F1A4A387100837FAE /* ViewCell.m in Sources */,
+				434685F51A5A45DC00315501 /* DetailViewController.m in Sources */,
 				43B0452C1A49D98000837FAE /* ViewController.m in Sources */,
 				436AD5521A550EBB009AC991 /* NetworkController.m in Sources */,
 				43B045231A49D98000837FAE /* main.m in Sources */,
@@ -296,7 +320,7 @@
 /* Begin PBXTargetDependency section */
 		43B0453B1A49D98000837FAE /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 43B0451C1A49D98000837FAE /* NateBirkholzTest */;
+			target = 43B0451C1A49D98000837FAE /* ImageFiler */;
 			targetProxy = 43B0453A1A49D98000837FAE /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -405,7 +429,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = NateBirkholzTest/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = ImageFiler;
 			};
 			name = Debug;
 		};
@@ -415,14 +439,13 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = NateBirkholzTest/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = ImageFiler;
 			};
 			name = Release;
 		};
 		43B045471A49D98000837FAE /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -433,7 +456,7 @@
 				);
 				INFOPLIST_FILE = NateBirkholzTestTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = ImageFilerTests;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/NateBirkholzTest.app/NateBirkholzTest";
 			};
 			name = Debug;
@@ -441,14 +464,14 @@
 		43B045481A49D98000837FAE /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
+				BUNDLE_LOADER = "";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
 				);
 				INFOPLIST_FILE = NateBirkholzTestTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = ImageFilerTests;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/NateBirkholzTest.app/NateBirkholzTest";
 			};
 			name = Release;
@@ -456,7 +479,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		43B045181A49D98000837FAE /* Build configuration list for PBXProject "NateBirkholzTest" */ = {
+		43B045181A49D98000837FAE /* Build configuration list for PBXProject "ImageFiler" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				43B045411A49D98000837FAE /* Debug */,
@@ -465,7 +488,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		43B045431A49D98000837FAE /* Build configuration list for PBXNativeTarget "NateBirkholzTest" */ = {
+		43B045431A49D98000837FAE /* Build configuration list for PBXNativeTarget "ImageFiler" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				43B045441A49D98000837FAE /* Debug */,
@@ -474,7 +497,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		43B045461A49D98000837FAE /* Build configuration list for PBXNativeTarget "NateBirkholzTestTests" */ = {
+		43B045461A49D98000837FAE /* Build configuration list for PBXNativeTarget "ImageFilerTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				43B045471A49D98000837FAE /* Debug */,

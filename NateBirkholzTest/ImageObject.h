@@ -11,9 +11,10 @@
 @interface ImageObject : NSObject
 
 @property (nonatomic, strong) NSString *imageObjectThumbnailURL;
+@property (nonatomic, strong) NSString *imageObjectFullSizeURL;
 @property (nonatomic, strong) NSNumber *imageObjectID;
 @property (nonatomic, strong) NSString *imageObjectTitle;
 
-- (instancetype)initWithID:(NSInteger)imgID andTitle:(NSString *)imgTitle andThumbnailURL:(NSString *)imgThumbnailURL;
+- (instancetype)initWithID:(NSInteger)imgID andTitle:(NSString *)imgTitle andFullSizeImageURL:(NSString *)imgFullSizeURL andThumbnailURL:(NSString *)imgThumbnailURL;
 
 @end

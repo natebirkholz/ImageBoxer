@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "43B0451C1A49D98000837FAE"
-               BuildableName = "NateBirkholzTest.app"
-               BlueprintName = "NateBirkholzTest"
-               ReferencedContainer = "container:NateBirkholzTest.xcodeproj">
+               BuildableName = "ImageFiler.app"
+               BlueprintName = "ImageFiler"
+               ReferencedContainer = "container:ImageFiler.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
          <BuildActionEntry
@@ -29,9 +29,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "43B045381A49D98000837FAE"
-               BuildableName = "NateBirkholzTestTests.xctest"
-               BlueprintName = "NateBirkholzTestTests"
-               ReferencedContainer = "container:NateBirkholzTest.xcodeproj">
+               BuildableName = "ImageFilerTests.xctest"
+               BlueprintName = "ImageFilerTests"
+               ReferencedContainer = "container:ImageFiler.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -47,9 +47,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "43B045381A49D98000837FAE"
-               BuildableName = "NateBirkholzTestTests.xctest"
-               BlueprintName = "NateBirkholzTestTests"
-               ReferencedContainer = "container:NateBirkholzTest.xcodeproj">
+               BuildableName = "ImageFilerTests.xctest"
+               BlueprintName = "ImageFilerTests"
+               ReferencedContainer = "container:ImageFiler.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -57,9 +57,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "43B0451C1A49D98000837FAE"
-            BuildableName = "NateBirkholzTest.app"
-            BlueprintName = "NateBirkholzTest"
-            ReferencedContainer = "container:NateBirkholzTest.xcodeproj">
+            BuildableName = "ImageFiler.app"
+            BlueprintName = "ImageFiler"
+            ReferencedContainer = "container:ImageFiler.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </TestAction>
@@ -76,9 +76,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "43B0451C1A49D98000837FAE"
-            BuildableName = "NateBirkholzTest.app"
-            BlueprintName = "NateBirkholzTest"
-            ReferencedContainer = "container:NateBirkholzTest.xcodeproj">
+            BuildableName = "ImageFiler.app"
+            BlueprintName = "ImageFiler"
+            ReferencedContainer = "container:ImageFiler.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -94,9 +94,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "43B0451C1A49D98000837FAE"
-            BuildableName = "NateBirkholzTest.app"
-            BlueprintName = "NateBirkholzTest"
-            ReferencedContainer = "container:NateBirkholzTest.xcodeproj">
+            BuildableName = "ImageFiler.app"
+            BlueprintName = "ImageFiler"
+            ReferencedContainer = "container:ImageFiler.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

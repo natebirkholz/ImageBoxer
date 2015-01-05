@@ -9,6 +9,7 @@
 #import "NetworkController.h"
 #import "ImageObject.h"
 #import <UIKit/UIKit.h>
+#import <CoreGraphics/CoreGraphics.h>
 
 @interface ViewController : UIViewController <UITableViewDelegate, UITableViewDataSource>
 

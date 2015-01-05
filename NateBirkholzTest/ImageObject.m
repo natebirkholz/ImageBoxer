@@ -10,11 +10,12 @@
 
 @implementation ImageObject
 
-- (instancetype)initWithID:(NSInteger)imgID andTitle:(NSString *)imgTitle andThumbnailURL:(NSString *)imgThumbnailURL {
+- (instancetype)initWithID:(NSInteger)imgID andTitle:(NSString *)imgTitle andFullSizeImageURL:(NSString *)imgFullSizeURL andThumbnailURL:(NSString *)imgThumbnailURL {
   self = [super init];
   if (self) {
     self.imageObjectID = [[NSNumber alloc]initWithInteger:imgID];
     self.imageObjectTitle = [[NSString alloc] initWithString:imgTitle];
+    self.imageObjectFullSizeURL = [[NSString alloc] initWithString:imgFullSizeURL];
     self.imageObjectThumbnailURL = [[NSString alloc] initWithString:imgThumbnailURL];
   }
   return self;

@@ -22,8 +22,8 @@
   }
 
   for (NSDictionary *JSonDictionary in arrayOfJSONObjects) {
-    NSInteger imgID = (NSInteger)JSonDictionary[@"id"];
-    ImageObject *newImageObject = [[ImageObject alloc] initWithID:imgID andTitle:JSonDictionary[@"title"] andThumbnailURL:JSonDictionary[@"thumbnailUrl"]];
+    NSInteger imgID = (NSInteger)[JSonDictionary[@"id"] integerValue];
+    ImageObject *newImageObject = [[ImageObject alloc] initWithID:imgID andTitle:JSonDictionary[@"title"] andFullSizeImageURL:JSonDictionary[@"url"] andThumbnailURL:JSonDictionary[@"thumbnailUrl"]];
     [arrayOfImageObjects addObject:newImageObject];
   }
   return arrayOfImageObjects;

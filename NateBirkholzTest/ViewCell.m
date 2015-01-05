@@ -23,9 +23,8 @@
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
-    [super setSelected:selected animated:animated];
+  [self setSelectionStyle:UITableViewCellSelectionStyleNone];
+  [super setSelected:selected animated:animated];
 }
-
-
 
 @end
