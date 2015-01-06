@@ -7,6 +7,9 @@
 //
 
 #import "TransitionFromDetailController.h"
+#import "ViewController.h"
+#import "DetailViewController.h"
+#import "ViewCell.h"
 
 @implementation TransitionFromDetailController
 

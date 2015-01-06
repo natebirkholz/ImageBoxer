@@ -53,7 +53,7 @@
 		436AD5511A550EBB009AC991 /* NetworkController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetworkController.m; sourceTree = "<group>"; };
 		436AD5531A55B83B009AC991 /* CellLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CellLabel.h; sourceTree = "<group>"; };
 		436AD5541A55B83B009AC991 /* CellLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CellLabel.m; sourceTree = "<group>"; };
-		43B0451D1A49D98000837FAE /* ImageFiler.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ImageFiler.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		43B0451D1A49D98000837FAE /* ImageBoxer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ImageBoxer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		43B045211A49D98000837FAE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		43B045221A49D98000837FAE /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		43B045241A49D98000837FAE /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -63,7 +63,7 @@
 		43B0452E1A49D98000837FAE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		43B045301A49D98000837FAE /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		43B045331A49D98000837FAE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
-		43B045391A49D98000837FAE /* ImageFilerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ImageFilerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		43B045391A49D98000837FAE /* ImageBoxerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ImageBoxerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		43B0453E1A49D98000837FAE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		43B0453F1A49D98000837FAE /* NateBirkholzTestTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NateBirkholzTestTests.m; sourceTree = "<group>"; };
 		43B0454C1A4A387100837FAE /* ViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewCell.h; sourceTree = "<group>"; };
@@ -101,8 +101,8 @@
 		43B0451E1A49D98000837FAE /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				43B0451D1A49D98000837FAE /* ImageFiler.app */,
-				43B045391A49D98000837FAE /* ImageFilerTests.xctest */,
+				43B0451D1A49D98000837FAE /* ImageBoxer.app */,
+				43B045391A49D98000837FAE /* ImageBoxerTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -194,9 +194,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		43B0451C1A49D98000837FAE /* ImageFiler */ = {
+		43B0451C1A49D98000837FAE /* ImageBoxer */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 43B045431A49D98000837FAE /* Build configuration list for PBXNativeTarget "ImageFiler" */;
+			buildConfigurationList = 43B045431A49D98000837FAE /* Build configuration list for PBXNativeTarget "ImageBoxer" */;
 			buildPhases = (
 				43B045191A49D98000837FAE /* Sources */,
 				43B0451A1A49D98000837FAE /* Frameworks */,
@@ -206,14 +206,14 @@
 			);
 			dependencies = (
 			);
-			name = ImageFiler;
+			name = ImageBoxer;
 			productName = NateBirkholzTest;
-			productReference = 43B0451D1A49D98000837FAE /* ImageFiler.app */;
+			productReference = 43B0451D1A49D98000837FAE /* ImageBoxer.app */;
 			productType = "com.apple.product-type.application";
 		};
-		43B045381A49D98000837FAE /* ImageFilerTests */ = {
+		43B045381A49D98000837FAE /* ImageBoxerTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 43B045461A49D98000837FAE /* Build configuration list for PBXNativeTarget "ImageFilerTests" */;
+			buildConfigurationList = 43B045461A49D98000837FAE /* Build configuration list for PBXNativeTarget "ImageBoxerTests" */;
 			buildPhases = (
 				43B045351A49D98000837FAE /* Sources */,
 				43B045361A49D98000837FAE /* Frameworks */,
@@ -224,9 +224,9 @@
 			dependencies = (
 				43B0453B1A49D98000837FAE /* PBXTargetDependency */,
 			);
-			name = ImageFilerTests;
+			name = ImageBoxerTests;
 			productName = NateBirkholzTestTests;
-			productReference = 43B045391A49D98000837FAE /* ImageFilerTests.xctest */;
+			productReference = 43B045391A49D98000837FAE /* ImageBoxerTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -247,7 +247,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 43B045181A49D98000837FAE /* Build configuration list for PBXProject "ImageFiler" */;
+			buildConfigurationList = 43B045181A49D98000837FAE /* Build configuration list for PBXProject "ImageBoxer" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -260,8 +260,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				43B0451C1A49D98000837FAE /* ImageFiler */,
-				43B045381A49D98000837FAE /* ImageFilerTests */,
+				43B0451C1A49D98000837FAE /* ImageBoxer */,
+				43B045381A49D98000837FAE /* ImageBoxerTests */,
 			);
 		};
 /* End PBXProject section */
@@ -320,7 +320,7 @@
 /* Begin PBXTargetDependency section */
 		43B0453B1A49D98000837FAE /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 43B0451C1A49D98000837FAE /* ImageFiler */;
+			target = 43B0451C1A49D98000837FAE /* ImageBoxer */;
 			targetProxy = 43B0453A1A49D98000837FAE /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -429,7 +429,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = NateBirkholzTest/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_NAME = ImageFiler;
+				PRODUCT_NAME = ImageBoxer;
 			};
 			name = Debug;
 		};
@@ -439,7 +439,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = NateBirkholzTest/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_NAME = ImageFiler;
+				PRODUCT_NAME = ImageBoxer;
 			};
 			name = Release;
 		};
@@ -456,8 +456,7 @@
 				);
 				INFOPLIST_FILE = NateBirkholzTestTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = ImageFilerTests;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/NateBirkholzTest.app/NateBirkholzTest";
+				PRODUCT_NAME = ImageBoxerTests;
 			};
 			name = Debug;
 		};
@@ -471,15 +470,14 @@
 				);
 				INFOPLIST_FILE = NateBirkholzTestTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = ImageFilerTests;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/NateBirkholzTest.app/NateBirkholzTest";
+				PRODUCT_NAME = ImageBoxerTests;
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		43B045181A49D98000837FAE /* Build configuration list for PBXProject "ImageFiler" */ = {
+		43B045181A49D98000837FAE /* Build configuration list for PBXProject "ImageBoxer" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				43B045411A49D98000837FAE /* Debug */,
@@ -488,7 +486,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		43B045431A49D98000837FAE /* Build configuration list for PBXNativeTarget "ImageFiler" */ = {
+		43B045431A49D98000837FAE /* Build configuration list for PBXNativeTarget "ImageBoxer" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				43B045441A49D98000837FAE /* Debug */,
@@ -497,7 +495,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		43B045461A49D98000837FAE /* Build configuration list for PBXNativeTarget "ImageFilerTests" */ = {
+		43B045461A49D98000837FAE /* Build configuration list for PBXNativeTarget "ImageBoxerTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				43B045471A49D98000837FAE /* Debug */,

@@ -2,6 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:ImageFiler.xcodeproj">
+      location = "self:ImageBoxer.xcodeproj">
    </FileRef>
 </Workspace>

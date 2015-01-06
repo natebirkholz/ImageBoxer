@@ -16,8 +16,8 @@
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "43B0451C1A49D98000837FAE"
                BuildableName = "ImageFiler.app"
-               BlueprintName = "ImageFiler"
-               ReferencedContainer = "container:ImageFiler.xcodeproj">
+               BlueprintName = "ImageBoxer"
+               ReferencedContainer = "container:ImageBoxer.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
          <BuildActionEntry
@@ -30,8 +30,8 @@
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "43B045381A49D98000837FAE"
                BuildableName = "ImageFilerTests.xctest"
-               BlueprintName = "ImageFilerTests"
-               ReferencedContainer = "container:ImageFiler.xcodeproj">
+               BlueprintName = "ImageBoxerTests"
+               ReferencedContainer = "container:ImageBoxer.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -48,8 +48,8 @@
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "43B045381A49D98000837FAE"
                BuildableName = "ImageFilerTests.xctest"
-               BlueprintName = "ImageFilerTests"
-               ReferencedContainer = "container:ImageFiler.xcodeproj">
+               BlueprintName = "ImageBoxerTests"
+               ReferencedContainer = "container:ImageBoxer.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -58,8 +58,8 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "43B0451C1A49D98000837FAE"
             BuildableName = "ImageFiler.app"
-            BlueprintName = "ImageFiler"
-            ReferencedContainer = "container:ImageFiler.xcodeproj">
+            BlueprintName = "ImageBoxer"
+            ReferencedContainer = "container:ImageBoxer.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </TestAction>
@@ -77,8 +77,8 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "43B0451C1A49D98000837FAE"
             BuildableName = "ImageFiler.app"
-            BlueprintName = "ImageFiler"
-            ReferencedContainer = "container:ImageFiler.xcodeproj">
+            BlueprintName = "ImageBoxer"
+            ReferencedContainer = "container:ImageBoxer.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -95,8 +95,8 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "43B0451C1A49D98000837FAE"
             BuildableName = "ImageFiler.app"
-            BlueprintName = "ImageFiler"
-            ReferencedContainer = "container:ImageFiler.xcodeproj">
+            BlueprintName = "ImageBoxer"
+            ReferencedContainer = "container:ImageBoxer.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

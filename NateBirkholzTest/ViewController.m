@@ -107,6 +107,7 @@
       ImageObject *selectedObject = self.imageObjects[selectedIndexPath.row];
       detailViewController.detailObject = selectedObject;
       detailViewController.imageThumb = self.imageCache[selectedObject.imageObjectThumbnailURL];
+      detailViewController.pathForOriginCell = selectedIndexPath;
     }
   }
 }

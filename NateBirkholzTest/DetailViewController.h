@@ -25,6 +25,7 @@
 @property (nonatomic, strong) NetworkController *networkController;
 @property (weak, nonatomic) IBOutlet UIImageView *objectFullSizeView;
 @property (nonatomic) CGRect frameOrigin;
+@property (nonatomic, strong) NSIndexPath *pathForOriginCell;
 
 
 

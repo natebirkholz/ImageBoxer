@@ -27,13 +27,13 @@
   ViewCell *cell = (ViewCell *)[fromViewController.tableView cellForRowAtIndexPath:[fromViewController.tableView indexPathForSelectedRow]];
   UIView *cellSnapshot = [cell snapshotViewAfterScreenUpdates:NO];
   cellSnapshot.frame = [containerView convertRect:cell.frame fromView:fromViewController.tableView];
-  cell.hidden = YES;
+  [cell setHidden:YES];
 
   toViewController.frameOrigin = cell.frame;
 
   toViewController.view.frame = [transitionContext finalFrameForViewController:toViewController];
   toViewController.view.alpha = 0;
-  toViewController.detailCellView.hidden = YES;
+  [[toViewController detailCellView] setHidden:YES];
 
   [containerView addSubview:toViewController.view];
   [containerView addSubview:cellSnapshot];

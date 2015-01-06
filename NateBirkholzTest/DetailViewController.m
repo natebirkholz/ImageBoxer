@@ -7,8 +7,11 @@
 //
 
 #import "DetailViewController.h"
+#import "TransitionFromDetailController.h"
 
 @interface DetailViewController () <UINavigationControllerDelegate>
+
+@property (nonatomic, strong) UIPercentDrivenInteractiveTransition *interactiveTransition;
 
 @end
 
@@ -17,6 +20,9 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
   self.networkController = [NetworkController sharedNetworkController];
+  UIScreenEdgePanGestureRecognizer *recognizer = [[UIScreenEdgePanGestureRecognizer alloc] initWithTarget:self action:@selector(handleRecognizer:)];
+  recognizer.edges = UIRectEdgeLeft;
+  [[self view] addGestureRecognizer:recognizer];
 }
 
 - (void)viewWillAppear:(BOOL)animated {
@@ -46,6 +52,32 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (void)handleRecognizer:(UIScreenEdgePanGestureRecognizer *)recognizer {
+  CGFloat progress = [recognizer translationInView:[self view]].x / (self.view.bounds.size.width *1.0);
+  progress = MIN(1.0, MAX(0.0, progress));
+
+  if (recognizer.state == UIGestureRecognizerStateBegan) {
+    self.interactiveTransition = [[UIPercentDrivenInteractiveTransition alloc] init];
+    [[self navigationController] popViewControllerAnimated:YES];
+  } else if (recognizer.state == UIGestureRecognizerStateChanged) {
+    [[self interactiveTransition] updateInteractiveTransition:progress];
+  } else if (recognizer.state == UIGestureRecognizerStateEnded || recognizer.state == UIGestureRecognizerStateCancelled) {
+    if (progress > 0.8) {
+      [[self interactiveTransition] finishInteractiveTransition];
+    } else {
+      [[self interactiveTransition] cancelInteractiveTransition];
+    }
+    self.interactiveTransition = nil;
+  }
+}
+
+- (id<UIViewControllerInteractiveTransitioning>)navigationController:(UINavigationController *)navigationController interactionControllerForAnimationController:(id<UIViewControllerAnimatedTransitioning>)animationController {
+  if ([animationController isKindOfClass:[TransitionFromDetailController class]]) {
+    return [self interactiveTransition];
+  } else {
+    return nil;
+  }
+}
 
 
 
