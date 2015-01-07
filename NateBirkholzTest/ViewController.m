@@ -43,6 +43,11 @@
   [[self navigationController] setDelegate:self];
   [[self activityIndicator] startAnimating];
   [[self loadingLabel] setHidden:NO];
+
+  self.title = @"Little Boxes";
+
+  [[self tableView] setDecelerationRate:UIScrollViewDecelerationRateFast];
+
   if (self.imageObjects) {
     [[self activityIndicator] stopAnimating];
     [[self loadingLabel] setHidden:YES];

@@ -20,7 +20,7 @@
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="152" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="fK1-EC-vuK">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" red="0.77647058820000003" green="0.86274509799999999" blue="0.94509803920000002" alpha="1" colorSpace="calibratedRGB"/>
                             </tableView>
                             <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="XNs-9i-AX3">
                                 <rect key="frame" x="290" y="322" width="20" height="20"/>
@@ -73,6 +73,7 @@
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="eQb-rJ-1va">
                                         <rect key="frame" x="16" y="16" width="120" height="120"/>
+                                        <color key="backgroundColor" red="0.94509803920000002" green="0.81176470590000005" blue="0.86274509799999999" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="120" id="JYB-8R-1OY"/>
                                             <constraint firstAttribute="height" constant="120" id="int-Jw-V3w"/>
@@ -96,6 +97,9 @@
                                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="BS1-fy-KII">
+                                        <rect key="frame" x="66" y="66" width="20" height="20"/>
+                                    </activityIndicatorView>
                                 </subviews>
                                 <color key="backgroundColor" red="0.77647058820000003" green="0.86274509799999999" blue="0.94509803920000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
@@ -104,9 +108,11 @@
                                     <constraint firstItem="eQb-rJ-1va" firstAttribute="leading" secondItem="Wjy-R6-Ez9" secondAttribute="leading" constant="16" id="74F-L2-pTA"/>
                                     <constraint firstAttribute="trailing" secondItem="sAR-0M-OC3" secondAttribute="trailing" constant="24" id="Aoh-Du-jf1"/>
                                     <constraint firstAttribute="height" constant="152" id="Bv6-5j-ZC6"/>
+                                    <constraint firstItem="BS1-fy-KII" firstAttribute="centerX" secondItem="eQb-rJ-1va" secondAttribute="centerX" id="VOu-pw-BWt"/>
                                     <constraint firstAttribute="bottom" secondItem="sAR-0M-OC3" secondAttribute="bottom" constant="16" id="aqO-Yi-9ke"/>
                                     <constraint firstItem="LKk-3f-MHN" firstAttribute="top" secondItem="Wjy-R6-Ez9" secondAttribute="top" constant="16" id="pMd-o1-Ln8"/>
                                     <constraint firstItem="LKk-3f-MHN" firstAttribute="leading" secondItem="eQb-rJ-1va" secondAttribute="trailing" constant="16" id="rIO-NQ-0F6"/>
+                                    <constraint firstItem="BS1-fy-KII" firstAttribute="centerY" secondItem="eQb-rJ-1va" secondAttribute="centerY" id="uib-Te-Sos"/>
                                     <constraint firstItem="sAR-0M-OC3" firstAttribute="leading" secondItem="eQb-rJ-1va" secondAttribute="trailing" constant="16" id="zz5-Jl-Hnh"/>
                                 </constraints>
                             </view>
@@ -121,7 +127,7 @@
                                 <rect key="frame" x="290" y="246" width="20" height="20"/>
                             </activityIndicatorView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" white="0.89821286150000001" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="Wjy-R6-Ez9" firstAttribute="leading" secondItem="vhM-bx-Ec1" secondAttribute="leadingMargin" constant="-16" id="2o6-Wx-KHm"/>
                             <constraint firstItem="gzh-rR-sEa" firstAttribute="top" secondItem="P14-7g-tG8" secondAttribute="bottom" constant="32" id="EbP-UQ-ePw"/>
@@ -140,6 +146,7 @@
                         <outlet property="objectIDLabel" destination="LKk-3f-MHN" id="Wbg-Ua-h3E"/>
                         <outlet property="objectThumbView" destination="eQb-rJ-1va" id="JuU-Gf-HUq"/>
                         <outlet property="objectTitleLabel" destination="sAR-0M-OC3" id="CcW-a5-0R8"/>
+                        <outlet property="thumbActivityIndicator" destination="BS1-fy-KII" id="dKD-5N-Oax"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3bJ-Ik-kp6" userLabel="First Responder" sceneMemberID="firstResponder"/>

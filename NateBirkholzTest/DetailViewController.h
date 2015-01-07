@@ -26,6 +26,7 @@
 @property (weak, nonatomic) IBOutlet UIImageView *objectFullSizeView;
 @property (nonatomic) CGRect frameOrigin;
 @property (nonatomic, strong) NSIndexPath *pathForOriginCell;
+@property (weak, nonatomic) IBOutlet UIActivityIndicatorView *thumbActivityIndicator;
 
 
 

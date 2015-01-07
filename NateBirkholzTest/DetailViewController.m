@@ -29,7 +29,16 @@
   [super viewWillAppear:animated];
   self.objectTitleLabel.text = self.detailObject.imageObjectTitle;
   self.objectIDLabel.text = [self.detailObject.imageObjectID stringValue];
+  if (self.imageThumb) {
   self.objectThumbView.image = self.imageThumb;
+  } else {
+    [[self thumbActivityIndicator] startAnimating];
+    [[self networkController] fetchImageDataFromURL:[NSURL URLWithString:self.detailObject.imageObjectThumbnailURL] withCompletionHandler:^(NSData *imageData) {
+      self.imageThumb = [[UIImage alloc] initWithData:imageData];
+      self.objectThumbView.image = self.imageThumb;
+      [[self thumbActivityIndicator] stopAnimating];
+    }];
+  }
 
   NSArray *layers = [[NSArray alloc] initWithObjects:self.objectTitleLabel.layer, self.objectIDLabel.layer, self.objectThumbView.layer, self.objectFullSizeView.layer, nil];
   for (CALayer *layer in layers) {
